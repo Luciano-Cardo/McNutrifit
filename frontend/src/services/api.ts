@@ -36,7 +36,6 @@ export const createOrder = (items: { productId: number, quantity: number }[], co
 export const getMyOrders = () =>
   api.get('/orders/my')
 
-// Mis productos
 export const getMyProducts = () =>
   api.get('/my-products')
 

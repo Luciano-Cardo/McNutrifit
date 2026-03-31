@@ -31,7 +31,6 @@ public class AppDbContext : DbContext
             .HasIndex(u => u.Email)
             .IsUnique();
 
-        // Índices de performance
         modelBuilder.Entity<Order>()
             .HasIndex(o => o.MpPaymentId);
 

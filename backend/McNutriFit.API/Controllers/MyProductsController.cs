@@ -19,7 +19,6 @@ public class MyProductsController : ControllerBase
         _db = db;
     }
 
-    // GET /api/my-products
     // Devuelve todos los planes que el usuario compró
     [HttpGet]
     public async Task<IActionResult> GetMyProducts()

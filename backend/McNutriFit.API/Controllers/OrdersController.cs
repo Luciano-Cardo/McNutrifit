@@ -80,7 +80,6 @@ public class OrdersController : ControllerBase
         _db.Orders.Add(order);
         await _db.SaveChangesAsync();
 
-        // Crear preferencia en MercadoPago
         var frontendUrl = _config["Frontend:Url"];
         var accessToken = _config["MercadoPago:AccessToken"];
 
@@ -115,7 +114,6 @@ public class OrdersController : ControllerBase
         var initPoint = mpData.GetProperty("init_point").GetString();
         var sandboxInitPoint = mpData.GetProperty("sandbox_init_point").GetString();
 
-        // Guardar el ID de preferencia en la orden
         order.MpPaymentId = mpData.GetProperty("id").GetString();
         await _db.SaveChangesAsync();
 
@@ -123,7 +121,7 @@ public class OrdersController : ControllerBase
         {
             orderId = order.Id,
             total = order.Total,
-            paymentUrl = sandboxInitPoint // En producción usar init_point
+            paymentUrl = initPoint // En test usar sandboxInit_point
         });
     }
 

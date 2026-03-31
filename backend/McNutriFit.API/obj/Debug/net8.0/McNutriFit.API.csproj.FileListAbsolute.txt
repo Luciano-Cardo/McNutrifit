@@ -138,3 +138,4 @@ C:\Users\lucia\Desktop\mcnutrifit-backend\backend\McNutriFit.API\obj\Debug\net8.
 C:\Users\lucia\Desktop\mcnutrifit-backend\backend\McNutriFit.API\obj\Debug\net8.0\McNutriFit.API.pdb
 C:\Users\lucia\Desktop\mcnutrifit-backend\backend\McNutriFit.API\obj\Debug\net8.0\McNutriFit.API.genruntimeconfig.cache
 C:\Users\lucia\Desktop\mcnutrifit-backend\backend\McNutriFit.API\obj\Debug\net8.0\ref\McNutriFit.API.dll
+C:\Users\lucia\Desktop\mcnutrifit-backend\backend\McNutriFit.API\obj\Debug\net8.0\McNutriFit.API.sourcelink.json

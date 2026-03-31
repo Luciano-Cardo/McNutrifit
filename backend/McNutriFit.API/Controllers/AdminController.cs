@@ -18,7 +18,6 @@ public class AdminController : ControllerBase
         _db = db;
     }
 
-    // GET /api/admin/stats
     [HttpGet("stats")]
     public async Task<IActionResult> GetStats()
     {
@@ -32,7 +31,6 @@ public class AdminController : ControllerBase
         return Ok(new { totalOrders, paidOrders, totalRevenue, totalProducts });
     }
 
-    // GET /api/admin/orders
     [HttpGet("orders")]
     public async Task<IActionResult> GetOrders()
     {
@@ -61,7 +59,6 @@ public class AdminController : ControllerBase
         return Ok(orders);
     }
 
-    // GET /api/admin/coupons
     [HttpGet("coupons")]
     public async Task<IActionResult> GetCoupons()
     {
@@ -69,7 +66,6 @@ public class AdminController : ControllerBase
         return Ok(coupons);
     }
 
-    // POST /api/admin/coupons
     [HttpPost("coupons")]
     public async Task<IActionResult> CreateCoupon([FromBody] Coupon coupon)
     {
@@ -78,7 +74,6 @@ public class AdminController : ControllerBase
         return Ok(coupon);
     }
 
-    // PATCH /api/admin/coupons/5
     [HttpPatch("coupons/{id}")]
     public async Task<IActionResult> ToggleCoupon(int id, [FromBody] ToggleCouponRequest req)
     {

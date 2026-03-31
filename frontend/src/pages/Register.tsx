@@ -36,15 +36,12 @@ export default function Register() {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="w-full max-w-md" style={{paddingBottom: '200px' }}>
-
         <div className="text-center mb-8">
           <h1 className="font-bold text-white" style={{ fontSize: '52px' }}>MC<span className="text-red-500">Nutrifit</span></h1>
           <p className="text-gray-400 mt-3 text-xl">Creá tu cuenta gratis</p>
         </div>
-
         <div className="bg-zinc-900 rounded-2xl border border-zinc-800" style={{ padding: '48px' }}>
           <form onSubmit={handleSubmit} className="space-y-5">
-
             <div style={{ padding: '10px'}}>
               <label className="block text-gray-400 mb-2" style={{ fontSize: '18px' }}>Nombre</label>
               <input
@@ -54,10 +51,8 @@ export default function Register() {
                 required
                 className="w-full bg-zinc-800 text-white rounded-lg border border-zinc-700 focus:outline-none focus:border-red-500 transition"
                 style={{ padding: '16px 20px', fontSize: '18px' }}
-                placeholder="Tu nombre"
-              />
+                placeholder="Tu nombre"/>
             </div>
-
             <div style={{ padding: '10px'}}>
               <label className="block text-gray-400 mb-2" style={{ fontSize: '18px' }}>Email</label>
               <input
@@ -67,10 +62,8 @@ export default function Register() {
                 required
                 className="w-full bg-zinc-800 text-white rounded-lg border border-zinc-700 focus:outline-none focus:border-red-500 transition"
                 style={{ padding: '16px 20px', fontSize: '18px' }}
-                placeholder="tu@email.com"
-              />
+                placeholder="tu@email.com"/>
             </div>
-
             <div style={{ padding: '10px'}}>
               <label className="block text-gray-400 mb-2">Contraseña</label>
               <input
@@ -81,14 +74,11 @@ export default function Register() {
                 minLength={6}
                 className="w-full bg-zinc-800 text-white rounded-lg border border-zinc-700 focus:outline-none focus:border-red-500 transition"
                 style={{ padding: '16px 20px', fontSize: '18px' }}
-                placeholder="Mínimo 6 caracteres"
-              />
+                placeholder="Mínimo 6 caracteres"/>
             </div>
-
             {error && (
               <p className="text-red-500 text-sm">{error}</p>
             )}
-
             <button
               type="submit"
               disabled={loading}
@@ -97,9 +87,7 @@ export default function Register() {
             >
               {loading ? 'Creando cuenta...' : 'Crear cuenta'}
             </button>
-
           </form>
-
           <p className="text-center text-gray-400 mt-8" style={{ fontSize: '16px', paddingTop: '10px' }}>
             ¿Ya tenés cuenta?{' '}
             <Link to="/login" className="text-red-500 hover:underline">
@@ -107,7 +95,6 @@ export default function Register() {
             </Link>
           </p>
         </div>
-
       </div>
     </div>
   )

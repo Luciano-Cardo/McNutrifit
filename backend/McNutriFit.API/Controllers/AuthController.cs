@@ -51,11 +51,4 @@ public class AuthController : ControllerBase
         var token = _tokenService.GenerateToken(user);
         return Ok(new AuthResponse(token, user.Name, user.Email, user.Role));
     }
-
-    // Endpoint temporal para generar hash — BORRARLO después
-    [HttpGet("hash/{password}")]
-    public IActionResult GetHash(string password)
-    {
-        return Ok(new { hash = BCrypt.Net.BCrypt.HashPassword(password) });
-    }
 }

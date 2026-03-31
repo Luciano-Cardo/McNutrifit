@@ -11,8 +11,7 @@ export default function PagoPendiente() {
         <p className="text-gray-400 text-lg mb-6">Tu pago está siendo procesado. Te avisaremos cuando se confirme.</p>
         <button
           onClick={() => navigate('/')}
-          className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-lg transition"
-        >
+          className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-lg transition">
           Volver al inicio
         </button>
       </div>

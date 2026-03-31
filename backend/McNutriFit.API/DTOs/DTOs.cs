@@ -1,13 +1,13 @@
 namespace McNutriFit.API.DTOs;
 
-// ── AUTH ──────────────────────────────────────────
+// ── AUTH ────────────────────────────
 public record RegisterRequest(string Name, string Email, string Password);
 
 public record LoginRequest(string Email, string Password);
 
 public record AuthResponse(string Token, string Name, string Email, string Role);
 
-// ── PRODUCTS ──────────────────────────────────────
+// ── PRODUCTOS ───────────────────────
 public record ProductResponse(
     int Id,
     string Name,
@@ -47,7 +47,7 @@ public record UpdateProductRequest(
     bool IsActive
 );
 
-// ── COUPONS ───────────────────────────────────────
+// ── CUPONES ───────────────────
 public record ValidateCouponRequest(string Code, decimal CartTotal);
 
 public record CouponResponse(
@@ -57,7 +57,7 @@ public record CouponResponse(
     decimal FinalTotal
 );
 
-// ── ORDERS ────────────────────────────────────────
+// ── ORDENES ─────────────────
 public record CreateOrderRequest(
     List<OrderItemRequest> Items,
     string? CouponCode
@@ -81,10 +81,10 @@ public record OrderItemResponse(
     int Quantity
 );
 
-// ── MERCADOPAGO ───────────────────────────────────
+// ── MERCADOPAGO ────────
 public record CheckoutResponse(string PaymentUrl, int OrderId);
 
-// ── MY PRODUCTS (mis compras) ─────────────────────
+// ── MIS COMPRAS ────────
 public record MyProductResponse(
     int ProductId,
     string Name,

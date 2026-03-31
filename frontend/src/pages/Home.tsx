@@ -36,23 +36,21 @@ export default function Home() {
  
   return (
     <div className="bg-black w-full">
- 
       <section
         className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6"
-        style={{ background: 'linear-gradient(160deg, #1a0000 0%, #000000 50%, #0d0d0d 100%)' }}
-      >
-        <span className="inline-block text-xs font-black text-red-500 uppercase tracking-widest mb-8 border border-red-800 px-5 py-2 rounded-full">
-          Planes digitales · Descarga instantánea
+        style={{ background: 'linear-gradient(160deg, #1a0000 0%, #000000 50%, #0d0d0d 100%)' }}>
+        <span className="inline-block text-xs font-black text-red-500 uppercase tracking-widest mb-8 border border-red-800 px-3 py-2 rounded-full text-center">
+          Guias digitales · Descarga instantánea
         </span>
-        <h1 className="text-6xl md:text-8xl font-black text-white leading-none tracking-tight mb-6 uppercase text-center">
+        <h1 className="text-3xl sm:text-5xl md:text-8xl font-black text-white leading-none tracking-tight mb-6 uppercase text-center">
           Transformá tu<br />cuerpo con el<br />plan <span className="text-red-500">correcto</span>
         </h1>
         <p className="text-gray-400 text-lg md:text-xl max-w-xl mx-auto mb-10 leading-relaxed text-center">
-          Rutinas de entrenamiento, dietas completas y planes diseñados por profesionales. Descargalos al instante.
+          Rutinas de entrenamiento, dietas completas y guias diseñados por profesionales. Descargalos al instante.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <button onClick={() => navigate('/productos')} className="bg-red-600 hover:bg-red-700 text-white font-black px-12 py-4 rounded-lg text-base transition uppercase tracking-widest">
-            Ver planes
+            Ver guias
           </button>
           <button onClick={() => navigate('/register')} className="border border-zinc-600 hover:border-white text-white font-bold px-12 py-4 rounded-lg text-base transition uppercase tracking-widest">
             Crear cuenta gratis
@@ -65,13 +63,12 @@ export default function Home() {
           </svg>
         </div>
       </section>
- 
       <section className="flex justify-center" style={{paddingTop: '16px', paddingBottom: '16px'}}>
         <div className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-zinc-800">
           {[
             { icon: '⚡', title: 'Llega al instante', desc: 'Descargá apenas completés el pago' },
             { icon: '📱', title: 'Lo abrís desde el celu', desc: 'Compatible con cualquier dispositivo' },
-            { icon: '🎯', title: 'Planes profesionales', desc: 'Diseñados por nutricionistas y entrenadores' },
+            { icon: '🎯', title: 'Guias profesionales', desc: 'Diseñados por nutricionistas y entrenadores' },
           ].map(({ icon, title, desc }) => (
             <div key={title} className="flex items-center justify-center gap-5 px-10 py-8">
               <span className="text-4xl">{icon}</span>
@@ -83,7 +80,6 @@ export default function Home() {
           ))}
         </div>
       </section>
- 
       <section className="flex justify-center" style={{paddingTop: '16px', paddingBottom: '16px'}}>
         <div className="w-full max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
@@ -95,20 +91,17 @@ export default function Home() {
                 key={label}
                 onClick={() => navigate('/productos')}
                 className="relative h-48 rounded-2xl overflow-hidden cursor-pointer group border border-zinc-800 hover:border-red-600 transition"
-                style={{ background: style }}
-              >
+                style={{ background: style }}>
                 <div className="absolute inset-0 flex flex-col justify-center px-10">
-                  <span className="text-xs text-red-400 font-black uppercase tracking-widest mb-2">Objetivo</span>
-                  <h3 className="text-white font-black text-3xl uppercase tracking-tight whitespace-pre-line">{label}</h3>
+                  <span className="text-xs text-red-400 font-black uppercase tracking-widest mb-2" style={{paddingLeft: '10px'}}>Objetivo</span>
+                  <h3 className="text-white font-black text-3xl uppercase tracking-tight whitespace-pre-line" style={{paddingLeft: '10px'}}>{label}</h3>
                 </div>
                 <div className="absolute right-8 top-1/2 -translate-y-1/2 text-7xl opacity-10 group-hover:opacity-20 transition">{icon}</div>
               </div>
             ))}
           </div>
- 
         </div>
       </section>
- 
       <section className="flex justify-center " style={{paddingTop: '16px', paddingBottom: '16px'}}>
         <div className="w-full max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -150,17 +143,15 @@ export default function Home() {
           </div>
         </div>
       </section>
- 
       <section className="flex justify-center text-center" style={{ background: 'linear-gradient(160deg, #0d0000 0%, #000000 100%)' }}>
         <div className="w-full max-w-2xl mx-auto" style={{paddingTop: '16px', paddingBottom: '16px'}}>
           <h2 className="text-5xl font-black text-white tracking-tight uppercase mb-4 text-center">¿Listo para<br />empezar?</h2>
-          <p className="text-gray-500 mb-10 leading-relaxed text-center">Creá tu cuenta gratis y accedé a todos tus planes desde cualquier dispositivo</p>
+          <p className="text-gray-500 mb-10 leading-relaxed text-center">Creá tu cuenta gratis y accedé a todos tus guias desde cualquier dispositivo</p>
           <button onClick={() => navigate('/register')} className="bg-red-600 hover:bg-red-700 text-white font-black px-14 py-4 rounded-lg text-base transition uppercase tracking-widest">
             Empezar ahora
           </button>
         </div>
       </section>
- 
     </div>
   )
 }

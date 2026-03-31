@@ -17,7 +17,6 @@ public class CouponsController : ControllerBase
         _db = db;
     }
 
-    // POST /api/coupons/validate
     // El frontend llama a esto cuando el usuario escribe un cupón en el carrito
     [HttpPost("validate")]
     [Authorize]

@@ -18,8 +18,6 @@ public class ProductsController : ControllerBase
         _db = db;
     }
 
-    // GET /api/products
-    // GET /api/products?category=masa-muscular
     [HttpGet]
     public async Task<IActionResult> GetAll([FromQuery] string? category)
     {
@@ -40,7 +38,6 @@ public class ProductsController : ControllerBase
         return Ok(products);
     }
 
-    // GET /api/products/5
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
@@ -54,7 +51,6 @@ public class ProductsController : ControllerBase
             p.OriginalPrice, p.Category, p.ImageUrl, p.IsActive));
     }
 
-    // GET /api/products/5/download  — solo si el usuario compró el producto
     [HttpGet("{id}/download")]
     [Authorize]
     public async Task<IActionResult> Download(int id)
@@ -77,7 +73,6 @@ public class ProductsController : ControllerBase
             userProduct.Product.FileUrl));
     }
 
-    // POST /api/products  — solo admin
     [HttpPost]
     [Authorize(Roles = "admin")]
     public async Task<IActionResult> Create([FromBody] CreateProductRequest req)
@@ -102,7 +97,6 @@ public class ProductsController : ControllerBase
                 product.ImageUrl, product.IsActive));
     }
 
-    // PUT /api/products/5  — solo admin
     [HttpPut("{id}")]
     [Authorize(Roles = "admin")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateProductRequest req)
@@ -125,7 +119,6 @@ public class ProductsController : ControllerBase
             product.ImageUrl, product.IsActive));
     }
 
-    // DELETE /api/products/5  — solo admin
     [HttpDelete("{id}")]
     [Authorize(Roles = "admin")]
     public async Task<IActionResult> Delete(int id)
@@ -133,7 +126,6 @@ public class ProductsController : ControllerBase
         var product = await _db.Products.FindAsync(id);
         if (product is null) return NotFound();
 
-        // Soft delete: no borramos, solo desactivamos
         product.IsActive = false;
         await _db.SaveChangesAsync();
         return NoContent();

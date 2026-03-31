@@ -6,7 +6,7 @@ public class User
     public string Name { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string PasswordHash { get; set; } = string.Empty;
-    public string Role { get; set; } = "customer"; // "customer" | "admin"
+    public string Role { get; set; } = "customer"; // "usuario" | "admin"
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public List<Order> Orders { get; set; } = new();
@@ -20,9 +20,9 @@ public class Product
     public string Description { get; set; } = string.Empty;
     public decimal Price { get; set; }
     public decimal? OriginalPrice { get; set; }
-    public string Category { get; set; } = string.Empty; // "masa-muscular" | "perder-grasa"
+    public string Category { get; set; } = string.Empty; 
     public string? ImageUrl { get; set; }
-    public string? FileUrl { get; set; } // Ruta del PDF — nunca se expone al frontend hasta que se pague
+    public string? FileUrl { get; set; } 
     public bool IsActive { get; set; } = true;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
@@ -32,7 +32,7 @@ public class Coupon
     public int Id { get; set; }
     public string Code { get; set; } = string.Empty;
     public decimal Discount { get; set; }
-    public string Type { get; set; } = "percentage"; // "percentage" | "fixed"
+    public string Type { get; set; } = "percentage"; 
     public bool IsActive { get; set; } = true;
     public DateTime? ExpiresAt { get; set; }
     public int? MaxUses { get; set; }
@@ -45,7 +45,7 @@ public class Order
     public int Id { get; set; }
     public int UserId { get; set; }
     public decimal Total { get; set; }
-    public string Status { get; set; } = "pending"; // "pending" | "paid" | "cancelled"
+    public string Status { get; set; } = "pending"; // "pendiente" | "pagado" | "cancelado"
     public string? MpPaymentId { get; set; }
     public string? CouponCode { get; set; }
     public decimal DiscountApplied { get; set; } = 0;
