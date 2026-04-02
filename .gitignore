@@ -1,0 +1,7 @@
+backend/McNutriFit.API/appsettings.json
+backend/McNutriFit.API/bin/
+backend/McNutriFit.API/obj/
+frontend/node_modules/
+frontend/dist/
+*.db
+*.sqlite

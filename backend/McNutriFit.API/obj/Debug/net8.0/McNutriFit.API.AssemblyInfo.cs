@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("McNutriFit.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2300d303604a8de27902b289d6cc07262426554")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58025114076c63aa46ab5b145a75c2410ac6ee4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("McNutriFit.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("McNutriFit.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
